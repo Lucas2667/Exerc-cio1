@@ -1,28 +1,10 @@
 <?php
-
-function quantidade($array) {
-    return count($array);
-}
-
-$númerosDigitados = [];
-    $soma = 0;
-
-while (true) {
-    $num = readline("Escreva qualquer número: ");
-    if ($num < 0) {
-        break;
-    }
-    $númerosDigitados[] = $num;
-    $soma += $num;
-}
-$quantidade =
-    quantidade($númerosDigitados);
-if ($quantidade > 0) {
-    $media = $soma / $quantidade;
-    echo "A media dos números é:
-    $media";
-}
-
-?>
-
-}
+$num =  readline("Escreva um  número inteiro positivo: ");
+    echo "Os divisiveis de $num são: ";
+        for($i = 1; $i<=$num; $i++)
+        {
+            if($num % $i==0)
+            {
+                echo "$i" .PHP_EOL;
+            }
+        }
