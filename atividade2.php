@@ -1,11 +1,19 @@
-<?php
+<?php 
+$numeroAleatorio = rand(1,100);
+$gameLoop = true;
 
-$num = readline("Escreva um número inteiro positivo: ");
-     echo "Os divisores de $num são: ";
-          for($i = 1; $i<=$num; $i++)
-          {
-              if($num % $i==0)
-              {
-                  echo "$i" .PHP_EOL;
-              }
-          }
+while( $gameLoop ) {    
+    $chute = readline ("Chute um número: ");
+    if ( $chute == $numeroAleatorio){
+    echo "Acertou" ;   
+    }
+
+    if ( $chute < $numeroAleatorio){
+             echo "Tente novamente o número aleatorio é maior que seu chute ". PHP_EOL;
+    }
+
+     if ($chute > $numeroAleatorio){
+     echo"Tente novamente o número aleatorio é menor que seu chute".PHP_EOL;
+     }
+
+}
